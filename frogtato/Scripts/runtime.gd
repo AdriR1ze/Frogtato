@@ -30,7 +30,7 @@ var sapo_grande_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/spr
 @export var sprite_enemy_2 = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/monstruo_babosa.png")
 @export var enemy_1 : Enemigo = Enemigo.new("Juan", 400, 10, 200, sprite_enemy_1, load("res://enemy.tscn"))
 @export var enemy_2 : Enemigo = Enemigo.new("Pedro", 400, 10, 200, sprite_enemy_2,load("res://enemy.tscn"))
-@export var Enemies : Array
+@export var Enemigos : Array
 
 
 
@@ -43,8 +43,8 @@ func _init() -> void:
 	Armas.append(SapoChico)
 	Armas.append(SapoGrande)
 	
-	Enemies.append(enemy_1)
-	Enemies.append(enemy_2)
+	Enemigos.append(enemy_1)
+	Enemigos.append(enemy_2)
 	
 	
 	#Asignacion de Items segun rareza
