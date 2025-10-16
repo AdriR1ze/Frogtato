@@ -16,13 +16,12 @@ scale = Vector2(1.5400001, 1.0038168)
 texture = ExtResource("1_0f027")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 36.0
-offset_right = 1148.0
-offset_bottom = 155.0
+offset_left = 563.0
+offset_top = 2.0
+offset_right = 611.0
+offset_bottom = 121.0
 theme_override_font_sizes/font_size = 42
-text = "                                                   60
-"
+text = "60"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0

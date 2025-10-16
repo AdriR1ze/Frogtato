@@ -21,3 +21,4 @@ func _process(delta: float) -> void:
 	if aparicion_contador >= aparicion_timer:
 		spawn_spawnpoint()
 		aparicion_contador = 0.0
+	$Label.set_text(str($Timer.get_time_left()).pad_decimals(1))
