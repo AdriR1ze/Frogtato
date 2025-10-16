@@ -12,9 +12,7 @@ func spawn_spawnpoint():
 	newSpawnpoint.position = Vector2(random_x, random_y)
 	get_tree().current_scene.add_child(newSpawnpoint)
 	
-func _ready():
-	musica_juego.play()
-	
+
 func _process(delta: float) -> void:
 	
 	aparicion_contador += delta
@@ -22,3 +20,6 @@ func _process(delta: float) -> void:
 		spawn_spawnpoint()
 		aparicion_contador = 0.0
 	$Label.set_text(str($Timer.get_time_left()).pad_decimals(0))
+func _ready():
+	musica_juego.play()
+	
