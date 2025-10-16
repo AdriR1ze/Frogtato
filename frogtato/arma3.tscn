@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3mihhbe3cij5"]
+
+[ext_resource type="Script" uid="uid://cqwei0xoxxr3g" path="res://arma.gd" id="1_qf0tq"]
+[ext_resource type="Texture2D" uid="uid://cmbg4u1hvyelq" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/pistola_renacuajos_32x32t.png" id="2_qf0tq"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qf0tq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(3, 3)
+texture = ExtResource("2_qf0tq")
+hframes = 3
+
+[node name="spawnpoint" type="Node2D" parent="."]

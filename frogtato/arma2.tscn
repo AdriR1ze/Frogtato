@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgbgq0e3syk2b"]
+
+[ext_resource type="Script" uid="uid://cqwei0xoxxr3g" path="res://arma.gd" id="1_1vwn8"]
+[ext_resource type="Texture2D" uid="uid://j2awgc6v5qe8" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/sapo_diablo32x32t.png" id="2_1vwn8"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1vwn8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(3, 3)
+texture = ExtResource("2_1vwn8")
+hframes = 6
+
+[node name="spawnpoint" type="Node2D" parent="."]

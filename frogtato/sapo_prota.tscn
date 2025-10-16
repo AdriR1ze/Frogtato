@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://btc057eu6tgft"]
+[gd_scene load_steps=15 format=3 uid="uid://btc057eu6tgft"]
 
-[ext_resource type="Script" path="res://Scripts/jugador.gd" id="1_nqhyu"]
+[ext_resource type="Script" uid="uid://bsoc6yk01d7us" path="res://Scripts/jugador.gd" id="1_nqhyu"]
 [ext_resource type="Texture2D" uid="uid://dxhqncye110cu" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/personaje_camina64x64.png" id="2_125ds"]
 [ext_resource type="Texture2D" uid="uid://bcbllj5qenpfc" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/personaje_quieto64x64.png" id="3_44k56"]
 
@@ -74,7 +74,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lgckh"]
-radius = 65.06919
+radius = 44.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqhyu"]
+size = Vector2(126, 83)
 
 [node name="sapo_prota" type="CharacterBody2D"]
 script = ExtResource("1_nqhyu")
@@ -87,4 +90,13 @@ animation = &"camina"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 8)
 shape = SubResource("CircleShape2D_lgckh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 10.5)
+shape = SubResource("RectangleShape2D_nqhyu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp217jeffdsud"]
+[gd_scene load_steps=8 format=3 uid="uid://cp217jeffdsud"]
 
 [ext_resource type="Texture2D" uid="uid://cmqkqr88w37d6" path="res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mapa.png" id="1_0f027"]
 [ext_resource type="Script" uid="uid://b3ihmgxsogn38" path="res://main_scene.gd" id="1_2c62f"]
 [ext_resource type="PackedScene" uid="uid://c2jslswvwk3uq" path="res://arma.tscn" id="3_gyfs4"]
 [ext_resource type="PackedScene" uid="uid://btc057eu6tgft" path="res://sapo_prota.tscn" id="4_d5x1h"]
 [ext_resource type="PackedScene" uid="uid://diqwlcqv3wgcc" path="res://Escenas/tienda.tscn" id="5_8mm7a"]
+[ext_resource type="PackedScene" uid="uid://cgbgq0e3syk2b" path="res://arma2.tscn" id="6_nfk4m"]
+[ext_resource type="PackedScene" uid="uid://c3mihhbe3cij5" path="res://arma3.tscn" id="7_66tet"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_2c62f")
@@ -32,5 +34,11 @@ position = Vector2(580, 341)
 [node name="sapo_prota" parent="." instance=ExtResource("4_d5x1h")]
 position = Vector2(565, 306)
 
-[node name="Node2D" parent="sapo_prota" instance=ExtResource("3_gyfs4")]
-position = Vector2(92, -1)
+[node name="ArmaMediana" parent="sapo_prota" instance=ExtResource("3_gyfs4")]
+position = Vector2(103, -9)
+
+[node name="ArmaGrande" parent="sapo_prota" instance=ExtResource("6_nfk4m")]
+position = Vector2(-2, -86)
+
+[node name="ArmaChica" parent="sapo_prota" instance=ExtResource("7_66tet")]
+position = Vector2(-106, 2)

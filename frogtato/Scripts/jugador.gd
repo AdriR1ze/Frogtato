@@ -4,6 +4,7 @@ class_name Player
 @export var attack_speed = 1.0
 @export var items_comprados : Array
 @export var lista_armas : Array 
+@export var vida = 100
 var armass = preload("res://arma.tscn")
 @export var runtime = preload("res://Scripts/resources/runtime.tres")
 @onready var animated_sprite = $Sprite2D
@@ -20,6 +21,7 @@ func AgregarArma(arma: Arma) -> void:
 	get_tree().current_scene.add_child(armasss)
 	armasss.position = Vector2(20,90)
 	armasss.get_node("ani").play(arma.nombre)
+
 
 
 func dano():
@@ -45,7 +47,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("camina")
 		if Input.is_action_pressed("a"):
 			direction.x -= 1
-			animated_sprite.flip_h = true
+			animated_sprite.flip_h = false
 			animated_sprite.play("camina")
 	else:
 		animated_sprite.play("quieto")
@@ -60,3 +62,10 @@ func suerte():
 	return 1
 		
 	
+func _process(delta: float) -> void:
+	if vida < 20:
+		emit_signal("muerto")
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("grupo_enemigos"):
+		vida -= 20
