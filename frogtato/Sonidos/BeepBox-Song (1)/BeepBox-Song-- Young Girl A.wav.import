@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c4hj2bdrjuu5r"
+path="res://.godot/imported/BeepBox-Song-- Young Girl A.wav-bdeba8cf277ea7954f47e39555906024.sample"
+
+[deps]
+
+source_file="res://Sonidos/BeepBox-Song (1)/BeepBox-Song-- Young Girl A.wav"
+dest_files=["res://.godot/imported/BeepBox-Song-- Young Girl A.wav-bdeba8cf277ea7954f47e39555906024.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

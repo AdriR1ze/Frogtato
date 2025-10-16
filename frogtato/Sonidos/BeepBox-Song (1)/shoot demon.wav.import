@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3ais8pkmw3v"
+path="res://.godot/imported/shoot demon.wav-50367a1aa41a6df55eb4301995672531.sample"
+
+[deps]
+
+source_file="res://Sonidos/BeepBox-Song (1)/shoot demon.wav"
+dest_files=["res://.godot/imported/shoot demon.wav-50367a1aa41a6df55eb4301995672531.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

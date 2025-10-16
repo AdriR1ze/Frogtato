@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b1urir5y2uqs"
+path="res://.godot/imported/frog1.wav-108fcce41e621628b04284298b3e6736.sample"
+
+[deps]
+
+source_file="res://Sonidos/BeepBox-Song (1)/frog1.wav"
+dest_files=["res://.godot/imported/frog1.wav-108fcce41e621628b04284298b3e6736.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

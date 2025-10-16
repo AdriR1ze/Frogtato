@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdypl1jhjmd5a"
+path="res://.godot/imported/BeepBox-Song (1).wav-7ab5b42cd45d7ff6bd897b919cd88253.sample"
+
+[deps]
+
+source_file="res://Sonidos/BeepBox-Song (1)/BeepBox-Song (1).wav"
+dest_files=["res://.godot/imported/BeepBox-Song (1).wav-7ab5b42cd45d7ff6bd897b919cd88253.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
