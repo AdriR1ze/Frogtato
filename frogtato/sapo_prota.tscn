@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://btc057eu6tgft"]
 
-[ext_resource type="Script" uid="uid://bab6mslp1k3hj" path="res://sapo_prota.gd" id="1_nqhyu"]
+[ext_resource type="Script" uid="uid://bsoc6yk01d7us" path="res://Scripts/jugador.gd" id="1_nqhyu"]
 [ext_resource type="Texture2D" uid="uid://dxhqncye110cu" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/personaje_camina64x64.png" id="2_125ds"]
 [ext_resource type="Texture2D" uid="uid://bcbllj5qenpfc" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/personaje_quieto64x64.png" id="3_44k56"]
 
@@ -84,7 +84,7 @@ texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_nf0pk")
 animation = &"camina"
-frame_progress = 0.28913447
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lgckh")

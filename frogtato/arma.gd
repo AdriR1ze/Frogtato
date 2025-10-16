@@ -1,4 +1,5 @@
 extends Node2D
+class_name Arma
 @onready var spawnpoint_nodo = $spawnpoint
 @onready var bala_escena = preload("res://bala.tscn")
 @export var runtime := preload("res://Scripts/resources/runtime.tres")

@@ -1,13 +1,20 @@
 extends Resource
-class_name Arma
+class_name ArmaRes
+
 @export var nombre : String
-@export var vida : float
-@export var dano : float
-@export var mov_speed : float
+@export var daño : int
+@export var cooldown : float
+@export var rango : int
 @export var sprite : CompressedTexture2D
 
-func _init(nombre,dano,cooldown,sprite):
+
+func _init(nombre,daño,cooldown,rango,sprite) -> void:
 	self.nombre = nombre
-	self.dano = dano
+	self.daño = daño
 	self.cooldown = cooldown
+	self.rango = rango
 	self.sprite = sprite
+
+func _to_string() -> String:
+	return self.nombre
+	
