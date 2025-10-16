@@ -22,9 +22,7 @@ var contador = 0
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	
-	tienda_llamada()
-
+	visible = false
 func _process(delta: float) -> void:
 
 	if int(main_scene.get_node("Timer").time_left) < 56:
@@ -44,6 +42,9 @@ func tienda_llamada():
 	Objeto_tienda2.get_node("Sprite2D").texture = objeto2.sprite
 	objeto3 = ItemEstadistica_Res_random()
 	Objeto_tienda3.get_node("Sprite2D").texture = objeto3.sprite
+	var enemigos = get_tree().get_nodes_in_group("grupo_enemigos")
+	for enemigo in enemigos:
+		enemigo.queue_free()
 
 func dificultada():
 	return dificultad
@@ -76,7 +77,8 @@ func arma_random():
 
 func ItemEstadistica_Res_random():
 	var rareza = get_random_rareza(player.suerte())
-	var lista = []
+	var lista : Array
+	lista = []
 
 	match rareza:
 		ItemEstadistica_Res.TipoRareza.COMUN: lista = runtime.Itemscomunes

@@ -2,7 +2,7 @@ extends CharacterBody2D
 @export var runtime := preload("res://Scripts/resources/runtime.tres")
 @onready var sapo = get_node("/root/MainScene/sapo_prota")
 @onready var main_scene = get_node("/root/MainScene")
-@onready var tienda = preload("res://Escenas/tienda.tscn")
+@onready var tienda = get_node("/root/MainScene/Tienda")
 var enemy_res: Enemigo
 var direction = Vector2.ZERO
 var current_health
@@ -28,13 +28,13 @@ func apply_resource(res: Enemigo):
 	$Sprite2D.texture = res.sprite
 	# Podés inicializar cualquier otra variable, como:
 	var vida = res.vida
-	current_health = vida
-	#var mov_speed = res.mov_speed 
+#	current_health = vida
+	var mov_speed = res.mov_speed 
 	#enemy_res = res
-	#$Sprite2D.texture = res.sprite
-	#var vida = res.vida * tienda.dificultada()
-	var mov_speed = res.mov_speed * tienda.dificultada() - (tienda.dificultada() - 1) / 4
-	#current_health = vida
+	$Sprite2D.texture = res.sprite
+	#var vida = res.vida * tienda.dificultad
+#	var mov_speed = res.mov_speed * tienda.dificultada() - (tienda.dificultada() - 1) / 4
+	current_health = vida
 	vida_label(vida)
 	
 	
