@@ -10,7 +10,7 @@ var objeto1
 var objeto2
 var objeto3
 var contador_tienda = 15
-
+var dificultad = 1
 @export var runtime = preload("res://Scripts/resources/runtime.tres")
 
 
@@ -21,53 +21,45 @@ var contador = 0
 
 
 func _ready() -> void:
-	contador +=1
-	print(contador)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	tienda_llamada()
 
 func _process(delta: float) -> void:
-	pass
-#	if main_scene.contador_kills > contador_tienda - 1:
-		#contador_tienda += 15
-		#tienda_llamada()
+
+	if int(main_scene.get_node("Timer").time_left) < 56:
+		main_scene.get_node("Timer").start()
+		tienda_llamada()
 
 func tienda_llamada():
 	Objeto_tienda1 = $ItemTienda1
 	Objeto_tienda2 = $ItemTienda2
 	Objeto_tienda3 = $ItemTienda3
 	
-	print(Objeto_tienda1.get_node("Sprite2D"),"ada")
-	print(Objeto_tienda2,"afjoa")
-	print(Objeto_tienda3)
 	get_tree().paused = true
 	visible = true  	
 	objeto1 = ItemEstadistica_Res_random()
-	print(objeto1)
 	Objeto_tienda1.get_node("Sprite2D").texture = objeto1.sprite
 	objeto2 = ItemEstadistica_Res_random()
 	Objeto_tienda2.get_node("Sprite2D").texture = objeto2.sprite
 	objeto3 = ItemEstadistica_Res_random()
 	Objeto_tienda3.get_node("Sprite2D").texture = objeto3.sprite
 
-
+func dificultada():
+	return dificultad
 
 func _on_button_pressed() -> void:
-	if random_objeto1 == 1:
-		player.AgregarItem(objeto1)
+	player.AgregarItem(objeto1)
 	
 	tienda_cerrar()
 
 func _on_button_2_pressed() -> void:
-	if random_objeto2 == 1:
-		player.AgregarItem(objeto2)
+	player.AgregarItem(objeto2)
 
 	tienda_cerrar()
 
 func _on_button_3_pressed() -> void:
-	if random_objeto3 == 1:
-		player.AgregarItem(objeto3)
+	player.AgregarItem(objeto3)
 
 	tienda_cerrar()
 
@@ -75,6 +67,7 @@ func _on_button_3_pressed() -> void:
 func tienda_cerrar():
 	get_tree().paused = false
 	visible = false
+	dificultad += 0.15
 	
 
 func arma_random():
@@ -98,7 +91,6 @@ func ItemEstadistica_Res_random():
 	return lista[random_number]
 
 func get_random_rareza(luck_value: float) -> ItemEstadistica_Res.TipoRareza:
-	print("agorsglrsninai")
 	var suerte_normalizada = luck_value / (luck_value + 100.0)
 	var base = {
 		ItemEstadistica_Res.TipoRareza.COMUN: 60.0,

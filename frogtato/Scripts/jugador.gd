@@ -26,7 +26,8 @@ func dano():
 	var dano = 100
 	for a in items_comprados:
 		if a.tipo_estadistica == ItemEstadistica_Res.TipoEstadistica.DANO:
-			dano += a.modificador
+			pass
+			#dano += a.modificador
 	return(dano)
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO

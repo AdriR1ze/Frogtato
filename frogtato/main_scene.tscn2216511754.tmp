@@ -15,8 +15,6 @@ scale = Vector2(1.5400001, 1.0038168)
 texture = ExtResource("1_0f027")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
-autostart = true
 
 [node name="Tienda" parent="." instance=ExtResource("5_8mm7a")]
 position = Vector2(580, 341)

@@ -7,6 +7,8 @@
 radius = 14.0
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_ag3k0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

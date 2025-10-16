@@ -1,6 +1,6 @@
 extends Area2D
 @export var runtime := preload("res://Scripts/resources/runtime.tres")
-@export var tiempo_aparicion := 3.0
+@export var tiempo_aparicion := 1.0
 var contador_aparicion = 0.0
 func enemigo_random():
 	var random_enemies = randi_range(0, len(runtime.Enemigos)-1)
