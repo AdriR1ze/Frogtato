@@ -1,8 +1,7 @@
 extends Node2D
 @export var runtime := preload("res://Scripts/resources/runtime.tres")
 var spawnpoint_enemigo = preload("res://spawnpoint_enemigos.tscn")
-
-var aparicion_timer = 2.0
+var aparicion_timer = 1.0
 var aparicion_contador = 0.0
 func spawn_spawnpoint():
 	var newSpawnpoint = spawnpoint_enemigo.instantiate()
