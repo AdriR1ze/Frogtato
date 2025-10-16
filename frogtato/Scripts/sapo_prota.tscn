@@ -85,7 +85,7 @@ position = Vector2(247, 414)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_nf0pk")
 animation = &"camina"
-frame_progress = 0.5939306
+frame_progress = 0.8809319
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(247, 414)

@@ -12,10 +12,16 @@ var item_vel_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagen
 @export var Item_velocidad : ItemEstadistica_Res = ItemEstadistica_Res.new("velocidad",100,ItemEstadistica_Res.TipoEstadistica.VELOCIDAD,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.LEGENDARIO, item_vel_sprite)
 var simple_vel_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_velocidad.png")
 @export var simple_velocidad : ItemEstadistica_Res = ItemEstadistica_Res.new("VELOCIDAD",10,ItemEstadistica_Res.TipoEstadistica.VELOCIDAD,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.COMUN, simple_vel_sprite)
+var raro_vel_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_velocidad.png")
+@export var raro_velocidad : ItemEstadistica_Res = ItemEstadistica_Res.new("VELOCIDAD",10,ItemEstadistica_Res.TipoEstadistica.VELOCIDAD,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.COMUN, raro_vel_sprite)
 var item_suerte_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mejora_suerte.png")
 @export var Item_suerte : ItemEstadistica_Res = ItemEstadistica_Res.new("trebol",100,ItemEstadistica_Res.TipoEstadistica.SUERTE,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.LEGENDARIO, item_suerte_sprite)
 var simple_suerte_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mejora_suerte.png")
 @export var simple_suerte : ItemEstadistica_Res = ItemEstadistica_Res.new("trebol",10,ItemEstadistica_Res.TipoEstadistica.SUERTE,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.COMUN, simple_suerte_sprite)
+var raro_suerte_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mejora_suerte.png")
+@export var raro_suerte : ItemEstadistica_Res = ItemEstadistica_Res.new("trebol",20,ItemEstadistica_Res.TipoEstadistica.SUERTE,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.RARO, raro_suerte_sprite)
+var epico_suerte_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mejora_suerte.png")
+@export var epico_suerte : ItemEstadistica_Res = ItemEstadistica_Res.new("trebol",50,ItemEstadistica_Res.TipoEstadistica.SUERTE,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.EPICO, epico_suerte_sprite)
 
 
 
@@ -56,7 +62,9 @@ func _init() -> void:
 	Items.append(Item_velocidad)
 	Items.append(simple_velocidad)
 	Items.append(Item_suerte)
-	Items.append(Item_velocidad)
+	Items.append(simple_suerte)
+	Items.append(raro_suerte)
+	Items.append(epico_suerte)
 	Armas.append(SapoMediano)
 	Armas.append(SapoChico)
 	Armas.append(SapoGrande)
