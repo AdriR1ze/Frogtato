@@ -13,7 +13,7 @@ func tienda_llamada():
 	objeto1 = item_random()
 	Objeto_Tienda1.get_node("ItemTienda1/Sprite2D").texture = objeto1.sprite
 	objeto2 = item_random()
-	Objeto_Tienda2.get_node("ItemTienda2/Sprite2D").texture = objeto2.sprite
+	Objeto_Tienda2 .get_node("ItemTienda2/Sprite2D").texture = objeto2.sprite
 	objeto3 = item_random()
 	Objeto_Tienda3.get_node("ItemTienda3/Sprite2D").texture = objeto3.sprite
 	
