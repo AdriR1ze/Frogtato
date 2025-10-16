@@ -4,8 +4,21 @@ var item_dano_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/image
 @export var Item_dano : ItemEstadistica_Res = ItemEstadistica_Res.new("DANO",100,ItemEstadistica_Res.TipoEstadistica.DANO,"Te duplica el daño", ItemEstadistica_Res.TipoRareza.LEGENDARIO,item_dano_sprite)
 var item_simple_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_fuerza.png")
 @export var Item_simple : ItemEstadistica_Res = ItemEstadistica_Res.new("DANO2",10,ItemEstadistica_Res.TipoEstadistica.DANO,"Te duplica el daño", ItemEstadistica_Res.TipoRareza.COMUN, item_simple_sprite)
-var item_atk_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_fuerza.png")
-@export var Item_Atk : ItemEstadistica_Res = ItemEstadistica_Res.new("AtkSpeed",50,ItemEstadistica_Res.TipoEstadistica.ATKSPEED,"Te da atk speed", ItemEstadistica_Res.TipoRareza.EPICO, item_atk_sprite)
+var item_atk_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_vel_atack.png")
+@export var Item_vel_atk : ItemEstadistica_Res = ItemEstadistica_Res.new("VEL_ATK",100,ItemEstadistica_Res.TipoEstadistica.ATKSPEED,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.LEGENDARIO, item_atk_sprite)
+var simple_vel_atk_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_vel_atack.png")
+@export var simple_vel_atk : ItemEstadistica_Res = ItemEstadistica_Res.new("vel_atk",10,ItemEstadistica_Res.TipoEstadistica.ATKSPEED,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.COMUN, simple_vel_atk_sprite)
+var item_vel_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_velocidad.png")
+@export var Item_velocidad : ItemEstadistica_Res = ItemEstadistica_Res.new("velocidad",100,ItemEstadistica_Res.TipoEstadistica.VELOCIDAD,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.LEGENDARIO, item_vel_sprite)
+var simple_vel_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/objeto_velocidad.png")
+@export var simple_velocidad : ItemEstadistica_Res = ItemEstadistica_Res.new("VELOCIDAD",10,ItemEstadistica_Res.TipoEstadistica.VELOCIDAD,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.COMUN, simple_vel_sprite)
+var item_suerte_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mejora_suerte.png")
+@export var Item_suerte : ItemEstadistica_Res = ItemEstadistica_Res.new("trebol",100,ItemEstadistica_Res.TipoEstadistica.SUERTE,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.LEGENDARIO, item_suerte_sprite)
+var simple_suerte_sprite = preload("res://Imagenes/sprites_ONIET/sprites_ONIET/imagenes/mejora_suerte.png")
+@export var simple_suerte : ItemEstadistica_Res = ItemEstadistica_Res.new("trebol",10,ItemEstadistica_Res.TipoEstadistica.SUERTE,"Te duplica la velocidad de ataque", ItemEstadistica_Res.TipoRareza.COMUN, simple_suerte_sprite)
+
+
+
 @export var Items : Array
 @export var Itemscomunes : Array
 @export var Itemsraros : Array
@@ -38,7 +51,12 @@ func _init() -> void:
 
 	Items.append(Item_dano)
 	Items.append(Item_simple)
-	Items.append(Item_Atk)
+	Items.append(Item_vel_atk)
+	Items.append(simple_vel_atk)
+	Items.append(Item_velocidad)
+	Items.append(simple_velocidad)
+	Items.append(Item_suerte)
+	Items.append(Item_velocidad)
 	Armas.append(SapoMediano)
 	Armas.append(SapoChico)
 	Armas.append(SapoGrande)

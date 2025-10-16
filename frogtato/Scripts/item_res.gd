@@ -3,7 +3,10 @@ class_name ItemEstadistica_Res
 
 enum TipoEstadistica {
 	DANO,
-	ATKSPEED
+	ATKSPEED,
+	VELOCIDAD,
+	SUERTE,
+	
 }
 enum TipoRareza {
 	COMUN,
