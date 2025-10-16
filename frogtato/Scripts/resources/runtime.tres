@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Runtime_res" load_steps=2 format=3 uid="uid://fyrjkop68pbk"]
+
+[ext_resource type="Script" uid="uid://dyh2b8b0tvfqo" path="res://Scripts/runtime.gd" id="1_jgnxo"]
+
+[resource]
+script = ExtResource("1_jgnxo")
+metadata/_custom_type_script = "uid://dyh2b8b0tvfqo"

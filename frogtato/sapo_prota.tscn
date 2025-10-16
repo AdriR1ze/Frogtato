@@ -1,0 +1,90 @@
+[gd_scene load_steps=14 format=3 uid="uid://btc057eu6tgft"]
+
+[ext_resource type="Script" uid="uid://bab6mslp1k3hj" path="res://sapo_prota.gd" id="1_nqhyu"]
+[ext_resource type="Texture2D" uid="uid://dxhqncye110cu" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/personaje_camina64x64.png" id="2_125ds"]
+[ext_resource type="Texture2D" uid="uid://bcbllj5qenpfc" path="res://Imagenes/sprites_ONIET/sprites_ONIET/spritesheets/personaje_quieto64x64.png" id="3_44k56"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nr4d"]
+atlas = ExtResource("2_125ds")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw4qs"]
+atlas = ExtResource("2_125ds")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3pwv"]
+atlas = ExtResource("2_125ds")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_waerk"]
+atlas = ExtResource("2_125ds")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ip3lc"]
+atlas = ExtResource("3_44k56")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaqil"]
+atlas = ExtResource("3_44k56")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us7v4"]
+atlas = ExtResource("3_44k56")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2xsl"]
+atlas = ExtResource("3_44k56")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nf0pk"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_3nr4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vw4qs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3pwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waerk")
+}],
+"loop": true,
+"name": &"camina",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ip3lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qaqil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us7v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2xsl")
+}],
+"loop": true,
+"name": &"quieto",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgckh"]
+radius = 65.06919
+
+[node name="sapo_prota" type="CharacterBody2D"]
+script = ExtResource("1_nqhyu")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_nf0pk")
+animation = &"camina"
+frame_progress = 0.28913447
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lgckh")
