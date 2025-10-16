@@ -6,6 +6,7 @@ class_name Arma
 var direction = Vector2.RIGHT
 var cooldown = 1.0
 var anterior_disparo = 0.0
+@onready var shoot=$AudioStreamPlayer
 
 func apuntar(target_pos: Vector2) -> void:
 	var direction = (target_pos - global_position).normalized()
@@ -25,6 +26,7 @@ func _process(delta: float) -> void:
 		anterior_disparo = 0.0
 	
 func disparar() -> void:
+	shoot.play()
 	var bala_instanciada = bala_escena.instantiate()
 	get_tree().current_scene.add_child(bala_instanciada)
 	bala_instanciada.position = spawnpoint_nodo.global_position
