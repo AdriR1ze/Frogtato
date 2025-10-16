@@ -26,6 +26,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 
 	if int(main_scene.get_node("Timer").time_left) < 56:
+		main_scene.get_node("Label").set_text("60")
 		main_scene.get_node("Timer").start()
 		tienda_llamada()
 
