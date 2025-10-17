@@ -26,7 +26,6 @@ func _process(delta: float) -> void:
 		anterior_disparo = 0.0
 	
 func disparar() -> void:
-	shoot.play()
 	var bala_instanciada = bala_escena.instantiate()
 	get_tree().current_scene.add_child(bala_instanciada)
 	bala_instanciada.position = spawnpoint_nodo.global_position
